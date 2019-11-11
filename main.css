@@ -1,0 +1,312 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../fonts/AvenirNext-Regular.woff') format('woff2'),
+         url('../fonts/AvenirNext-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: url('../fonts/AvenirNext-Bold.woff') format('woff2'),
+         url('../fonts/AvenirNext-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+}
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+body{
+    font-family: AvenirNext;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+a.button {
+    font-family: AvenirNextBold;
+}
+h2{
+    margin: 0;
+    text-align: center;
+    padding-bottom: 50px;
+}   
+a {
+    text-decoration: none;
+}
+ul{
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+a.button {
+    border: 1px solid #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    background: #3040c4;
+}
+a.is-secondary{
+    background: #ffffff;
+    color: #3040c4;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header .container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f3f5fd;
+}
+.is-visible-mobile {display: none;}
+.burger{
+    position: relative;
+  padding-left: 1.25em;
+  background: none;
+  border: none;
+}
+.burger:before{
+    content: "";
+    position: absolute;
+    top: 0.25em;
+    width: 1em;
+    height: 0.125em;
+    border-top: 0.375em double #000;
+    border-bottom: 0.125em solid #000;
+}
+header ul li a{
+    margin-left: 25px;
+    color: #000000;
+}
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero a{
+    line-height: 4;
+}
+.hero img{
+    width: 700px;
+}
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch__background{
+    background: #eff0fc;
+    height: 400px;
+    position: absolute;
+    z-index: -1;
+    margin: 0 auto;
+}
+.meetYourMatchــform span{
+    top: -25px;
+    margin: 0 15px;
+    color: #c5c7d8;
+    position: relative;
+}
+.meetYourMatchــcontent {
+    padding-top: 50px;
+}
+.meetYourMatchــform {
+    text-align: center;
+}
+.meetYourMatchــcontent .widgets {
+    margin: 0 50px;
+}
+input[type="text"] {
+    border:1px solid  #3040c4;
+    padding: 15px 53px;
+    border-radius: 50px;
+    background: #ffffff;
+    text-transform: capitalize;
+    font-size: 18px;
+    color:#3040c4 ;
+    background-image: url('../Images/map-pin.png');
+    background-repeat: no-repeat;
+    background-position: 22px center;
+   
+}
+button.button.is-primary {
+    border: 1px solid #ffffff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    color: #ffffff;
+    background: #3040c4;
+}
+.form-group {
+    margin-top: 30px;
+}
+form.meetYourMatchــform label input{display: none;}
+form.meetYourMatchــform {
+    margin-bottom: 30px;
+}
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+section.howItWorks .widget {
+    margin: 0 80px;
+    text-align: center;
+}
+/*----------------------٩-----------------------*/
+/*             #    STORIES                      */
+/*----------------------------------------------*/
+.stories{
+    background: #f6f6f9;
+}
+.stories img {
+    width: 100%;
+}
+a.link {
+    color: #3040c4;
+    font-family: AvenirNextBold;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions{
+    background: #3040c4;
+    color: white;
+    text-align: center;
+}
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+footer ul li a{
+    color: #000000;
+}
+.item h5{margin: 0;}
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+}
+section,
+footer
+{
+    padding: 50px 0;
+}
+/* mobile && tablet */
+@media only screen and (max-width: 1024px) {
+    .widget img,
+    .hero img
+    {
+        width:100%;
+    }
+    section.hero{padding-bottom: 0px;}
+    section.meetYourMatch{padding-top: 0px;}
+}
+/* Desc */
+@media only screen and (min-width: 1024px) {
+    footer .container,
+    footer .footer-nav,
+    .hero .container,
+    .widgets,
+    header ul
+    {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .stories .widget:nth-child(2) {
+        margin: 0 15px;
+    }  
+    p.heading-paragraph{
+        text-align: center;
+        padding: 0 290px;
+    }
+}
+/* tablet && Desc */
+@media only screen and (min-width: 768px) {
+    footer .container,
+    footer .footer-nav,
+    header ul
+    {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .meetYourMatch__background {
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+    .item {
+        margin-left: 92px;
+    }
+}
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .is-searchResults
+    {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+/* Mobile  */
+@media only screen and (max-width: 767px) {
+    .main-nav{display: none;}
+    .is-visible-mobile {display: inline-block;}
+    .meetYourMatch .container{
+        max-width: 100%;
+    }
+    .meetYourMatch__background
+    {
+        width:100%;
+        border-radius: 0 0 20px 20px;
+    }
+    .footer-nav{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    } .footer-nav{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;     
+    }
+}
